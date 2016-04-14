@@ -20,6 +20,10 @@ Route::get('/', function () {
     return view('welcome', compact('links'));
 });
 
+Route::get('/submit', function () {
+    return view('submit');
+});
+
 Route::auth();
 
 Route::get('/home', 'HomeController@index');
