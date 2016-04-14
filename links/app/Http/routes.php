@@ -11,8 +11,13 @@
 |
 */
 
+//Route::get('/', function () {
+//    return view('welcome');
+//});
+
 Route::get('/', function () {
-    return view('welcome');
+    $links = \App\Link::all();
+    return view('welcome', compact('links'));
 });
 
 Route::auth();
